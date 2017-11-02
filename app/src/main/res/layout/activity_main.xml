@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.androidprojects.sunilsharma.colorapp.MainActivity">
+
+    <Button
+        android:id="@+id/buttonTakeAPicture"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/take_pictuer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSavePicture"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/save_picture"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTakeAPicture" />
+
+    <ImageView
+        android:id="@+id/imagePhoto"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSavePicture"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <SeekBar
+        android:id="@+id/redColorSeekBar"
+        android:layout_width="150dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:max="100"
+        android:progress="0"
+        android:thumbTint="#990000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagePhoto" />
+
+    <SeekBar
+        android:id="@+id/greenColorseekBar"
+        android:layout_width="150dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="15dp"
+        android:max="100"
+        android:progress="0"
+        android:thumbTint="#009900"
+        app:layout_constraintTop_toBottomOf="@+id/redColorSeekBar"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <SeekBar
+        android:id="@+id/blueColorseekBar"
+        android:layout_width="150dp"
+        android:layout_height="17dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:max="100"
+        android:progress="0"
+        android:thumbTint="#000099"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greenColorseekBar" />
+
+    <TextView
+        android:id="@+id/textRedColorValue"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:text="0.0"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagePhoto" />
+
+    <TextView
+        android:id="@+id/textGreenColorValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:text="0.0"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRedColorValue" />
+
+    <TextView
+        android:id="@+id/textBlueColorValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:text="0.0"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textGreenColorValue" />
+
+    <Button
+        android:id="@+id/buttonShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/share_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blueColorseekBar" />
+</android.support.constraint.ConstraintLayout>
